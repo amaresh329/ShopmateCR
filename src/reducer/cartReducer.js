@@ -5,7 +5,8 @@ export const cartReducer = (state,action) => {
       return {...state,cartList:payload.products};
     case "REMOVE_FROM_CART":
       return {...state,cartList:payload.products};
-
+    case "UPDATE_TOTAL":
+      return {...state,total:payload.total};
     case "DEFAULT":
       throw new Error("No case found in cartReducer");
   }
